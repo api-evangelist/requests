@@ -1,0 +1,40 @@
+aid: requests
+name: Requests
+description: >-
+  Requests is a simple and elegant HTTP library for Python, designed for human beings.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+      - Clients
+      - Python
+      - HTTP Client
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/requests/refs/heads/main/apis.yml
+created: '2026-03-27'
+modified: '2026-03-27'
+specificationVersion: '0.19'
+apis:
+  - aid: requests:requests
+    name: Requests
+    description: >-
+      Requests is a simple and elegant HTTP library for Python, designed for human beings.
+    humanURL: https://requests.readthedocs.io
+    tags:
+        - Clients
+        - Python
+        - HTTP Client
+    properties:
+      - type: Documentation
+        url: https://requests.readthedocs.io/en/latest/
+      - type: Getting Started
+        url: https://requests.readthedocs.io/en/latest/user/quickstart/
+common:
+  - type: Website
+    url: https://requests.readthedocs.io
+  - type: Documentation
+    url: https://requests.readthedocs.io/en/latest/
+  - type: GitHub Organization
+    url: https://github.com/psf/requests
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
