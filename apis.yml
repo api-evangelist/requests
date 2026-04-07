@@ -5,9 +5,9 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-      - Clients
-      - Python
-      - HTTP Client
+  - Clients
+  - HTTP Client
+  - Python
 url: >-
   https://raw.githubusercontent.com/api-evangelist/requests/refs/heads/main/apis.yml
 created: '2026-03-27'
@@ -20,9 +20,9 @@ apis:
       Requests is a simple and elegant HTTP library for Python, designed for human beings.
     humanURL: https://requests.readthedocs.io
     tags:
-        - Clients
-        - Python
-        - HTTP Client
+      - Clients
+      - HTTP Client
+      - Python
     properties:
       - type: Documentation
         url: https://requests.readthedocs.io/en/latest/
