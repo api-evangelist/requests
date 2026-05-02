@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/requests/refs/heads/main/json-schema/requests-request-schema.json",
+  "title": "Requests Request",
+  "description": "JSON Schema describing the parameters accepted by the Python Requests library's main request() function and convenience methods (get, post, put, patch, delete, head, options).",
+  "type": "object",
+  "required": ["method", "url"],
+  "properties": {
+    "method": {
+      "type": "string",
+      "enum": ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
+      "description": "HTTP method for the request."
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL for the request."
+    },
+    "params": {
+      "type": ["object", "array", "string"],
+      "description": "Dictionary, list of tuples, or bytes to send in the query string."
+    },
+    "data": {
+      "type": ["object", "array", "string"],
+      "description": "Dictionary, list of tuples, bytes, or file-like object to send in the request body (form-encoded)."
+    },
+    "json": {
+      "description": "A JSON-serializable Python object to send as application/json in the request body."
+    },
+    "headers": {
+      "type": "object",
+      "description": "Dictionary of HTTP headers to send with the request.",
+      "additionalProperties": { "type": "string" }
+    },
+    "cookies": {
+      "type": ["object", "string"],
+      "description": "Dictionary or CookieJar of cookies to send with the request."
+    },
+    "files": {
+      "type": "object",
+      "description": "Dictionary of name to file-like objects for multipart form upload."
+    },
+    "auth": {
+      "type": ["array", "object", "null"],
+      "description": "Auth tuple (username, password) for Basic Auth, or an auth callable for custom auth schemes."
+    },
+    "timeout": {
+      "type": ["number", "array", "null"],
+      "description": "Seconds to wait for the server to respond. Float for single timeout; [connect_timeout, read_timeout] tuple for separate timeouts."
+    },
+    "allow_redirects": {
+      "type": "boolean",
+      "description": "Whether to follow redirects. Defaults to True for GET/POST/etc., False for HEAD.",
+      "default": true
+    },
+    "proxies": {
+      "type": "object",
+      "description": "Dictionary mapping protocol schemes to proxy URLs (e.g., {'https': 'http://proxy:8080'}).",
+      "additionalProperties": { "type": "string" }
+    },
+    "verify": {
+      "type": ["boolean", "string"],
+      "description": "Boolean to control TLS certificate verification, or path string to a CA bundle. Defaults to True.",
+      "default": true
+    },
+    "stream": {
+      "type": "boolean",
+      "description": "If False, response content is downloaded immediately. If True, streaming mode is used.",
+      "default": false
+    },
+    "cert": {
+      "type": ["string", "array"],
+      "description": "Path to SSL client certificate .pem file, or a ['cert', 'key'] tuple."
+    }
+  }
+}

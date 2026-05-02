@@ -1,0 +1,39 @@
+{
+  "_comment": "Python Requests: r = requests.post('https://httpbin.org/post', json={'name': 'Alice'}, headers={'Authorization': 'Bearer token123'}, timeout=15)",
+  "request": {
+    "@context": "https://raw.githubusercontent.com/api-evangelist/requests/refs/heads/main/json-ld/requests-context.jsonld",
+    "@type": "HTTPRequest",
+    "method": "POST",
+    "url": "https://httpbin.org/post",
+    "headers": {
+      "Authorization": "Bearer token123",
+      "Content-Type": "application/json"
+    },
+    "json": {
+      "name": "Alice",
+      "email": "alice@example.com"
+    },
+    "timeout": 15,
+    "verify": true
+  },
+  "response": {
+    "@context": "https://raw.githubusercontent.com/api-evangelist/requests/refs/heads/main/json-ld/requests-context.jsonld",
+    "@type": "HTTPResponse",
+    "status_code": 200,
+    "ok": true,
+    "reason": "OK",
+    "url": "https://httpbin.org/post",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "encoding": "utf-8",
+    "elapsed": 0.187,
+    "json_body": {
+      "json": {
+        "name": "Alice",
+        "email": "alice@example.com"
+      },
+      "url": "https://httpbin.org/post"
+    }
+  }
+}

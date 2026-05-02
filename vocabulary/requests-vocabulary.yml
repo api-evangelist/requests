@@ -1,0 +1,164 @@
+aid: requests
+name: Requests Vocabulary
+description: >-
+  Domain vocabulary for the Python Requests HTTP library (requests.readthedocs.io),
+  covering its programming model, core objects, authentication mechanisms,
+  session management, and integrations within the Python ecosystem.
+created: '2026-05-02'
+modified: '2026-05-02'
+
+terms:
+
+  - term: RequestsLibrary
+    label: Requests Library
+    definition: >-
+      An Apache2-licensed HTTP library for Python, designed for human beings.
+      Requests abstracts the complexity of urllib3, providing simple, idiomatic
+      methods for all HTTP verbs. Published as the 'requests' PyPI package,
+      it is among the most downloaded Python packages with ~300M weekly downloads
+      and is depended on by over 4 million repositories.
+    tags:
+      - Python
+      - HTTP Client
+      - Open Source
+
+  - term: Session
+    label: Requests Session
+    definition: >-
+      A requests.Session object that persists parameters (headers, cookies,
+      auth, proxies) across multiple requests, enabling connection pooling
+      through urllib3 and improving performance for repeated calls to the
+      same host.
+    tags:
+      - Connection Management
+      - Performance
+
+  - term: Response
+    label: requests.Response
+    definition: >-
+      The object returned by all Requests method calls. Contains the HTTP
+      status code, headers, body (as text, bytes, or parsed JSON), cookies,
+      redirect history, and timing information.
+    tags:
+      - Core Object
+      - HTTP
+
+  - term: PreparedRequest
+    label: PreparedRequest
+    definition: >-
+      A fully prepared, immutable representation of an HTTP request that has
+      been encoded and is ready to be sent. Generated internally before
+      transmission.
+    tags:
+      - Core Object
+      - HTTP
+
+  - term: HTTPAdapter
+    label: HTTPAdapter
+    definition: >-
+      A transport adapter that allows customizing how Requests handles HTTP
+      connections — including retry logic, pool size, and SSL settings.
+      Mounted to a Session to control behavior for specific URL prefixes.
+    tags:
+      - Advanced Usage
+      - Extensibility
+
+  - term: BasicAuth
+    label: Basic Authentication
+    definition: >-
+      HTTP Basic Authentication provided by passing a (username, password)
+      tuple to the auth parameter. Requests encodes credentials in the
+      Authorization header as per RFC 7617.
+    tags:
+      - Authentication
+
+  - term: DigestAuth
+    label: Digest Authentication
+    definition: >-
+      HTTP Digest Authentication using requests.auth.HTTPDigestAuth. More
+      secure than Basic Auth as it hashes credentials before transmission.
+    tags:
+      - Authentication
+
+  - term: BearerToken
+    label: Bearer Token Auth
+    definition: >-
+      OAuth2/JWT Bearer Token authentication, typically implemented by
+      passing an Authorization header: {'Authorization': 'Bearer <token>'}.
+      Not a built-in auth class but a common Requests pattern.
+    tags:
+      - Authentication
+      - OAuth2
+
+  - term: StreamingResponse
+    label: Streaming Response
+    definition: >-
+      When stream=True is passed to a request, the response body is not
+      immediately downloaded. Instead, content is retrieved lazily using
+      response.iter_content() or response.iter_lines(), enabling large
+      file downloads without loading all data into memory.
+    tags:
+      - Performance
+      - Large Payloads
+
+  - term: TLSVerification
+    label: TLS Certificate Verification
+    definition: >-
+      The verify parameter controls SSL/TLS certificate verification.
+      verify=True (default) validates against the system CA bundle.
+      verify=False disables verification (not recommended in production).
+      verify='/path/to/bundle' uses a custom CA bundle.
+    tags:
+      - Security
+      - TLS
+
+  - term: Timeout
+    label: Request Timeout
+    definition: >-
+      The timeout parameter specifies how long to wait for a server response.
+      A float sets a combined connect+read timeout. A (connect_timeout,
+      read_timeout) tuple sets them separately. No timeout by default
+      (requests can hang indefinitely).
+    tags:
+      - Reliability
+      - Best Practice
+
+  - term: Redirect
+    label: HTTP Redirect Following
+    definition: >-
+      Requests automatically follows redirects for all methods when
+      allow_redirects=True (default). Redirect history is stored in
+      response.history. Use allow_redirects=False to suppress redirect following.
+    tags:
+      - HTTP
+      - Navigation
+
+  - term: ConnectionPooling
+    label: Connection Pooling
+    definition: >-
+      When using requests.Session, urllib3 pools TCP connections to hosts.
+      Reusing connections avoids the overhead of TCP and TLS handshakes on
+      repeated requests to the same server.
+    tags:
+      - Performance
+      - Session Management
+
+  - term: ProxySupport
+    label: Proxy Support
+    definition: >-
+      Requests supports HTTP, HTTPS, and SOCKS proxies via the proxies
+      parameter or environment variables (HTTP_PROXY, HTTPS_PROXY, NO_PROXY).
+      SOCKS support requires the requests[socks] extra.
+    tags:
+      - Networking
+      - Security
+
+  - term: MultipartUpload
+    label: Multipart File Upload
+    definition: >-
+      Files are uploaded using the files parameter with a dict mapping
+      field names to file-like objects or (filename, fileobj, content_type)
+      tuples. Requests sets the appropriate multipart/form-data Content-Type.
+    tags:
+      - File Upload
+      - HTTP

@@ -1,0 +1,36 @@
+{
+  "_comment": "Python Requests: r = requests.get('https://api.github.com/users/octocat', headers={'Accept': 'application/vnd.github+json'}, timeout=10)",
+  "request": {
+    "@context": "https://raw.githubusercontent.com/api-evangelist/requests/refs/heads/main/json-ld/requests-context.jsonld",
+    "@type": "HTTPRequest",
+    "method": "GET",
+    "url": "https://api.github.com/users/octocat",
+    "headers": {
+      "Accept": "application/vnd.github+json"
+    },
+    "timeout": 10,
+    "verify": true,
+    "allow_redirects": true
+  },
+  "response": {
+    "@context": "https://raw.githubusercontent.com/api-evangelist/requests/refs/heads/main/json-ld/requests-context.jsonld",
+    "@type": "HTTPResponse",
+    "status_code": 200,
+    "ok": true,
+    "reason": "OK",
+    "url": "https://api.github.com/users/octocat",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8",
+      "X-RateLimit-Remaining": "59"
+    },
+    "encoding": "utf-8",
+    "elapsed": 0.342,
+    "json_body": {
+      "login": "octocat",
+      "id": 583231,
+      "name": "The Octocat",
+      "company": "GitHub",
+      "public_repos": 8
+    }
+  }
+}

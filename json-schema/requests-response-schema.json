@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/requests/refs/heads/main/json-schema/requests-response-schema.json",
+  "title": "Requests Response",
+  "description": "JSON Schema representing the key attributes of a requests.Response object returned by the Python Requests library after an HTTP call.",
+  "type": "object",
+  "properties": {
+    "status_code": {
+      "type": "integer",
+      "description": "HTTP status code of the response (e.g., 200, 404, 500).",
+      "examples": [200, 201, 400, 404, 500]
+    },
+    "ok": {
+      "type": "boolean",
+      "description": "True if status_code is less than 400, False otherwise."
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Final URL of the response after following any redirects."
+    },
+    "headers": {
+      "type": "object",
+      "description": "Case-insensitive dictionary of response headers.",
+      "additionalProperties": { "type": "string" }
+    },
+    "encoding": {
+      "type": ["string", "null"],
+      "description": "Encoding to use when accessing response.text. Guessed from Content-Type header."
+    },
+    "text": {
+      "type": "string",
+      "description": "Response body decoded as a string using response.encoding."
+    },
+    "content": {
+      "type": "string",
+      "contentEncoding": "base64",
+      "description": "Response body as raw bytes (base64-encoded for JSON representation)."
+    },
+    "json_body": {
+      "type": ["object", "array", "null"],
+      "description": "Parsed JSON body, equivalent to calling response.json(). Only present when Content-Type is application/json."
+    },
+    "elapsed": {
+      "type": "number",
+      "description": "Time elapsed between sending the request and receiving the last byte of the response, in seconds."
+    },
+    "history": {
+      "type": "array",
+      "description": "List of Response objects representing any redirects followed.",
+      "items": {
+        "type": "object",
+        "description": "A redirect response in the redirect chain."
+      }
+    },
+    "cookies": {
+      "type": "object",
+      "description": "CookieJar of cookies the server sent back.",
+      "additionalProperties": { "type": "string" }
+    },
+    "reason": {
+      "type": "string",
+      "description": "HTTP reason phrase for the status code (e.g., 'OK', 'Not Found')."
+    },
+    "request": {
+      "type": "object",
+      "description": "The PreparedRequest object that was sent.",
+      "properties": {
+        "method": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+        "headers": { "type": "object" },
+        "body": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

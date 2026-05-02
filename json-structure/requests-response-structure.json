@@ -1,0 +1,90 @@
+{
+  "name": "Requests Response",
+  "description": "Structure documentation for the requests.Response object returned by all HTTP method calls in the Python Requests library.",
+  "fields": [
+    {
+      "name": "status_code",
+      "type": "integer",
+      "required": false,
+      "description": "HTTP status code of the response (e.g., 200, 201, 404, 500)."
+    },
+    {
+      "name": "ok",
+      "type": "boolean",
+      "required": false,
+      "description": "True if status_code is less than 400."
+    },
+    {
+      "name": "url",
+      "type": "string (uri)",
+      "required": false,
+      "description": "Final URL after following redirects."
+    },
+    {
+      "name": "headers",
+      "type": "object",
+      "required": false,
+      "description": "Case-insensitive dict of response headers."
+    },
+    {
+      "name": "encoding",
+      "type": "string | null",
+      "required": false,
+      "description": "Encoding used to decode response.text. Guessed from Content-Type."
+    },
+    {
+      "name": "text",
+      "type": "string",
+      "required": false,
+      "description": "Response body decoded as a Unicode string."
+    },
+    {
+      "name": "content",
+      "type": "bytes",
+      "required": false,
+      "description": "Response body as raw bytes."
+    },
+    {
+      "name": "json()",
+      "type": "method -> object | array",
+      "required": false,
+      "description": "Method that deserializes the JSON response body. Raises ValueError if response is not JSON."
+    },
+    {
+      "name": "elapsed",
+      "type": "timedelta",
+      "required": false,
+      "description": "Time elapsed between sending the request and receiving the last byte."
+    },
+    {
+      "name": "history",
+      "type": "array<Response>",
+      "required": false,
+      "description": "List of Responses from redirect chain, oldest to newest."
+    },
+    {
+      "name": "cookies",
+      "type": "RequestsCookieJar",
+      "required": false,
+      "description": "Cookies the server set in the response."
+    },
+    {
+      "name": "reason",
+      "type": "string",
+      "required": false,
+      "description": "HTTP reason phrase (e.g., 'OK', 'Not Found')."
+    },
+    {
+      "name": "request",
+      "type": "PreparedRequest",
+      "required": false,
+      "description": "The PreparedRequest that was sent to produce this response."
+    },
+    {
+      "name": "raise_for_status()",
+      "type": "method -> None | raises HTTPError",
+      "required": false,
+      "description": "Raises requests.HTTPError if status_code >= 400."
+    }
+  ]
+}

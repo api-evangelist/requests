@@ -1,0 +1,74 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "req": "https://schema.api-evangelist.com/requests/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "hydra": "http://www.w3.org/ns/hydra/core#",
+    "dcterms": "http://purl.org/dc/terms/",
+
+    "HTTPRequest": {
+      "@id": "hydra:Operation",
+      "@type": "@id"
+    },
+    "HTTPResponse": {
+      "@id": "req:Response",
+      "@type": "@id"
+    },
+    "HTTPSession": {
+      "@id": "req:Session",
+      "@type": "@id"
+    },
+
+    "method": {
+      "@id": "hydra:method",
+      "@type": "xsd:string"
+    },
+    "url": {
+      "@id": "schema:url",
+      "@type": "@id"
+    },
+    "headers": "req:headers",
+    "params": "req:queryParams",
+    "data": "req:formData",
+    "json": "req:jsonBody",
+    "cookies": "req:cookies",
+    "auth": "req:auth",
+    "timeout": {
+      "@id": "req:timeout",
+      "@type": "xsd:decimal"
+    },
+    "allow_redirects": {
+      "@id": "req:allowRedirects",
+      "@type": "xsd:boolean"
+    },
+    "verify": "req:tlsVerify",
+    "stream": {
+      "@id": "req:stream",
+      "@type": "xsd:boolean"
+    },
+    "proxies": "req:proxies",
+    "cert": "req:clientCert",
+
+    "status_code": {
+      "@id": "req:statusCode",
+      "@type": "xsd:integer"
+    },
+    "ok": {
+      "@id": "req:isOk",
+      "@type": "xsd:boolean"
+    },
+    "reason": "req:reasonPhrase",
+    "encoding": "req:encoding",
+    "text": "req:textBody",
+    "content": "req:binaryContent",
+    "elapsed": {
+      "@id": "req:elapsed",
+      "@type": "xsd:decimal"
+    },
+    "history": {
+      "@id": "req:redirectHistory",
+      "@container": "@list"
+    }
+  }
+}
