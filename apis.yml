@@ -44,7 +44,7 @@ apis:
         url: https://requests.readthedocs.io/en/latest/
       - type: APIReference
         url: https://requests.readthedocs.io/en/latest/api/
-      - type: Getting Started
+      - type: GettingStarted
         url: https://requests.readthedocs.io/en/latest/user/quickstart/
       - type: AdvancedUsage
         url: https://requests.readthedocs.io/en/latest/user/advanced/
@@ -57,7 +57,7 @@ common:
     url: https://requests.readthedocs.io
   - type: Documentation
     url: https://requests.readthedocs.io/en/latest/
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/psf/requests
   - type: PyPI
     name: Requests on PyPI
@@ -91,7 +91,7 @@ common:
     name: Requests Vocabulary
     description: Domain vocabulary for the Requests library programming model, features, and ecosystem.
     url: https://raw.githubusercontent.com/api-evangelist/requests/refs/heads/main/vocabulary/requests-vocabulary.yml
-  - type: Changelog
+  - type: ChangeLog
     name: Requests Changelog
     description: Release history and changelog for the Requests library.
     url: https://requests.readthedocs.io/en/latest/community/updates/
