@@ -79,11 +79,11 @@ common:
     name: Requests JSON-LD Context
     description: JSON-LD context mapping Requests HTTP concepts to Hydra and schema.org.
     url: https://raw.githubusercontent.com/api-evangelist/requests/refs/heads/main/json-ld/requests-context.jsonld
-  - type: Example
+  - type: Examples
     name: GET Request Example
     description: Example of a GET request to the GitHub API using requests.get().
     url: https://raw.githubusercontent.com/api-evangelist/requests/refs/heads/main/examples/requests-get-example.json
-  - type: Example
+  - type: Examples
     name: POST Request Example
     description: Example of a POST request with JSON body using requests.post().
     url: https://raw.githubusercontent.com/api-evangelist/requests/refs/heads/main/examples/requests-post-example.json
