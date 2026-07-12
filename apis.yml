@@ -53,6 +53,8 @@ apis:
       - type: PyPI
         url: https://pypi.org/project/requests/
 common:
+  - type: DomainSecurity
+    url: security/requests-domain-security.yml
   - type: Website
     url: https://requests.readthedocs.io
   - type: Documentation
