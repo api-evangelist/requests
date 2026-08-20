@@ -31,6 +31,13 @@ tags:
   - Clients
   - HTTP Client
   - HTTP Library
+  - Open-Source
+  - Python
+  - Python Software Foundation
+tags_raw:
+  - Clients
+  - HTTP Client
+  - HTTP Library
   - Open Source
   - Python
   - Python Software Foundation
@@ -46,6 +53,12 @@ apis:
       automatic content handling, authentication, session management, and TLS verification.
     humanURL: https://requests.readthedocs.io
     tags:
+      - Clients
+      - HTTP Client
+      - HTTP Library
+      - Open-Source
+      - Python
+    tags_raw:
       - Clients
       - HTTP Client
       - HTTP Library
