@@ -12,15 +12,20 @@ description: >-
   timeouts. Current stable version: 2.33.1 (March 2026). Supports Python 3.10+.
 type: Index
 deliveryModel:
-  model: unknown
-  open_source: false
+  model: self-hosted
+  license: Apache-2.0
+  license_evidence:
+    repo: psf/requests
+    spdx: Apache-2.0
+    stars: 54343
+  open_source: true
   commercial: false
   callable_host: false
-  label: Delivery model not determined — needs a product licence on record
-  confidence: low
+  label: Self-hosted open source · you run it yourself
+  confidence: medium
   source:
-  - none
-  generated: '2026-08-28'
+  - repository-license
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: freemium
@@ -42,7 +47,7 @@ tags:
   - Clients
   - HTTP Client
   - HTTP Library
-  - Open-Source
+  - Open Source
   - Python
   - Python Software Foundation
 tags_raw:
@@ -52,6 +57,7 @@ tags_raw:
   - Open Source
   - Python
   - Python Software Foundation
+  - Open-Source
 created: '2026-03-27'
 modified: '2026-05-02'
 specificationVersion: '0.23'
@@ -67,7 +73,7 @@ apis:
       - Clients
       - HTTP Client
       - HTTP Library
-      - Open-Source
+      - Open Source
       - Python
     tags_raw:
       - Clients
@@ -75,6 +81,7 @@ apis:
       - HTTP Library
       - Open Source
       - Python
+      - Open-Source
     properties:
       - type: Documentation
         url: https://requests.readthedocs.io/en/latest/
